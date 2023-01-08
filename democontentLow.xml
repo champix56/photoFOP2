@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<photos xmlns:fo="http://www.w3.org/1999/XSL/Format" theme="file:///c:/Users/champix/AppData/Roaming/fond600652162.png" withFileName="false" intercal="false">
+	<titre>xmlbr1</titre>
+	<couv>
+		<image href="MG_1932_DxOEPREUVE-EPRUVEL.jpg" path="file:///g:/partage/photos/"/>
+	</couv>
+	<pages titre="true">
+		<image href="10589498_10152666826402884_269854391_n.jpg" path="file:///g:/partage/photos/"><fo:block text-align="center" font-style="italic">Hello</fo:block>1</image>
+		<image href="10599489_10152664721102884_8998763423280924639_n.jpg" path="file:///g:/partage/photos/">2</image>
+		<image href="10603059_10152666856762884_1968346443_n.jpg" path="file:///g:/partage/photos/">3</image>
+		<image href="10616075_10152664721277884_204613508926358332_n.jpg" path="file:///g:/partage/photos/">4</image>
+		<image href="10637762_10152666826227884_1150744547_n.jpg" path="file:///g:/partage/photos/">5</image>
+		<image href="10637762_10152666826227884_1150744547_n.jpg" path="file:///g:/partage/photos/">6</image>
+		<image href="10637762_10152666826227884_1150744547_n.jpg" path="file:///g:/partage/photos/">7</image>
+		<image href="10637762_10152666826227884_1150744547_n.jpg" path="file:///g:/partage/photos/">8</image>
+	</pages>
+	<backcouv>
+		<fo:block text-align="center">desorbaix@free.fr</fo:block>
+	</backcouv>
+</photos>
