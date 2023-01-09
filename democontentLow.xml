@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <photos xmlns:fo="http://www.w3.org/1999/XSL/Format" theme="file:///c:/Users/champix/AppData/Roaming/fond600652162.png" withFileName="false" intercal="false">
+	<config>
+		<cols>2</cols>
+		<rows>2</rows>
+	</config>
 	<titre>xmlbr1</titre>
 	<couv>
 		<image href="MG_1932_DxOEPREUVE-EPRUVEL.jpg" path="file:///g:/partage/photos/"/>
