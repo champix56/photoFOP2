@@ -3,6 +3,9 @@
 	<config>
 		<cols>2</cols>
 		<rows>2</rows>
+		<defaultUnit>mm</defaultUnit>
+		<width>210</width>	
+		<height>297</height>	
 	</config>
 	<titre>xmlbr1</titre>
 	<couv>

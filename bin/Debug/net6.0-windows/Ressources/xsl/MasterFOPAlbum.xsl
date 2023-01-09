@@ -7,8 +7,8 @@
 	<xsl:param name="paperWidth" select="210"/>
 	<xsl:param name="paperHeight" select="297"/>
 	<!--page configuration-->
-	<xsl:param name="tableCols" select="3"/>
-	<xsl:param name="tableRows" select="2"/>
+	<xsl:param name="tableCols" select="/photos/config/cols"/>
+	<xsl:param name="tableRows" select="/photos/config/rows"/>
 	
 	<!--inherit configuration-->
 	<xsl:variable name="imageEachPages" select="$tableCols * $tableRows"/>

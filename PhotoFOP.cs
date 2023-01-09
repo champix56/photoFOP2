@@ -3,26 +3,34 @@ namespace photoFOP2
     public partial class PhotoFOP : Form
     {
         protected Config config;
-        protected String[] imagesPath;
-
-
         public PhotoFOP()
         {
             InitializeComponent();
             initializeDataGridView();
             initializeComboBackgroundImages();
             this.config = new Config();
-            this.imagesPath = new String[0];
+            initializeConfig();
+        }
+        private void initializeConfig()
+        {
+            this.config.load();
+            nud_row.Value = this.config.rows;
+            nud_col.Value = this.config.cols;
         }
         protected void initializeDataGridView()
         {
-            dataGridView1.Columns.Add("col_image", "image");
+            DataGridViewImageColumn img = new DataGridViewImageColumn();
+            img.Name = "image";
+            img.Width = 400;
+            dataGridView1.Columns.Add(img);
             dataGridView1.Columns.Add("col_fichier", "fichier");
+            dataGridView1.Columns.Add("col_commentaire", "commentaire");
+            dataGridView1.AllowUserToAddRows = false;
         }
         protected void initializeComboBackgroundImages()
         {
             string current = System.IO.Directory.GetCurrentDirectory();
-            IEnumerable<string> ressources = System.IO.Directory.EnumerateFiles(current + "\\ressources");
+            IEnumerable<string> ressources = System.IO.Directory.EnumerateFiles(current + "\\Ressources\\images");
             foreach (string ressource in ressources)
             {
                 string extension = ressource.Substring(ressource.LastIndexOf('.'));
@@ -61,11 +69,11 @@ namespace photoFOP2
         private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConfigForm configF = new ConfigForm();
-            configF.config = this.config;
+            configF.setConfigClass(ref this.config);
             configF.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             if (DialogResult.OK == saveFileDialog1.ShowDialog())
             {
@@ -92,30 +100,29 @@ namespace photoFOP2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "image files(.jpg,.bmp,*.tif,*.tiff,*.jpeg,*.bmp,*.png)|*.jpg,*.bmp,*.tif,*.tiff,*.jpeg,*.bmp,*.png|All Files (*.*)|*.*";
             DialogResult res = openFileDialog1.ShowDialog();
             if (res == DialogResult.OK)
             {
                 string filename = openFileDialog1.FileName;
                 addFile(filename);
-
             }
         }
         protected void addFile(string fileName)
         {
             string ext = fileName.Substring(fileName.LastIndexOf('.') + 1).ToLowerInvariant();
-            if (ext != "jpg" && ext != "jpeg" && ext != "gif" & ext != "png" & ext != "tif" && ext != "bmp") { return; }
-            DataGridViewRow row = new DataGridViewRow();
-            DataGridViewCell cell = new DataGridViewTextBoxCell();
-            cell.Value = fileName;
-            row.Cells.Add(cell);
-            cell = new DataGridViewTextBoxCell();
-            cell.Value = fileName;
-            row.Cells.Add(cell);
-            dataGridView1.Rows.Add(row);
+            if (ext != "jpg" && ext != "jpeg" && ext != "gif" & ext != "png" & ext != "tif" && ext != "bmp")
+            {
+                return;
+            }
+            Bitmap img = Tools.ResizeImage(Image.FromFile(fileName), 300);
+            dataGridView1.Rows.Add(img, fileName);
+            dataGridView1.Rows[dataGridView1.RowCount - 1].Height = img.Height + 40;
         }
-
         private void button4_Click_1(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "image files(*.jpg,*.bmp,*.tif,*.tiff,*.jpeg,*.bmp,*.png)|*.jpg,*.bmp,*.tif,*.tiff,*.jpeg,*.bmp,*.png|All Files (*.*)|*.*";
+
             DialogResult res = openFileDialog1.ShowDialog();
             if (res == DialogResult.OK)
             {
@@ -135,18 +142,73 @@ namespace photoFOP2
         }
         private void backGroundImageChange(object sender, EventArgs e)
         {
+            if (config == null) return;
+            string item = null;
             if (sender.GetType().Name == "ComboBox")
             {
                 if (((ComboBox)sender).SelectedIndex == 0)
                 {
                     this.BackgroundImage = null;
-                    return;
+                    this.config.backImage = null;
+                    item = null;
                 }
-                string item = ((ComboBox)sender).SelectedItem.ToString();
-                Image image = Image.FromFile(System.IO.Directory.GetCurrentDirectory() + "\\ressources\\" + item);
-                this.BackgroundImage = image;
+                item = System.IO.Directory.GetCurrentDirectory() + "\\Ressources\\images\\" + ((ComboBox)sender).SelectedItem.ToString();
+            }
+            else
+            {
+                item = ((TextBox)sender).Text;
 
             }
+            if(item==null)return; 
+            Image image = Image.FromFile(item);
+            this.BackgroundImage = image;
+            this.config.backImage.href = item.Substring(item.LastIndexOf('\\'));
+            this.config.backImage.path = item.Substring(0,item.LastIndexOf('\\'));
+            this.config.save();
+        }
+        private void enregistrerConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            config.save(saveFileDialog1.FileName);
+        }
+        private void enregistrerConfigSousToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "photofop config Files (.fxm)|*.fxm|XML Files (.xml)|*.xml|All Files (*.*)|*.*";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                config.save(saveFileDialog1.FileName);
+            }
+        }
+
+        private void chargerConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "photofop config Files (.fxm)|*.fxm|XML Files (.xml)|*.xml|All Files (*.*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                config.load(openFileDialog1.FileName);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "photofop Transformation Files (.fxs)|*.fxs|XSL Files (*.xsl,*.xslt)|*.xsl,*.xslt|All Files (*.*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                config.load(openFileDialog1.FileName);
+            }
+        }
+
+        private void nud_col_ValueChanged(object sender, EventArgs e)
+        {
+            this.config.cols = (int)nud_col.Value;
+        }
+        private void nud_row_ValueChanged(object sender, EventArgs e)
+        {
+            this.config.rows = (int)nud_row.Value;
+        }
+
+        private void executeTransfoButton_Click(object sender, EventArgs e)
+        {
+            this.config.save();
         }
     }
 }

@@ -36,9 +36,9 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nud_row = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nud_col = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,6 +55,9 @@
             this.enregistrerProjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chargerConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enregistrerConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enregistrerConfigSousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,8 +78,8 @@
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_row)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_col)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -113,7 +116,7 @@
             this.groupBox8.Size = new System.Drawing.Size(207, 167);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Sortie";
+            this.groupBox8.Text = "Transformation";
             // 
             // button5
             // 
@@ -123,6 +126,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "find";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox1
             // 
@@ -164,9 +168,9 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.numericUpDown2);
+            this.groupBox6.Controls.Add(this.nud_row);
             this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Controls.Add(this.numericUpDown1);
+            this.groupBox6.Controls.Add(this.nud_col);
             this.groupBox6.Controls.Add(this.label3);
             this.groupBox6.Location = new System.Drawing.Point(6, 29);
             this.groupBox6.Name = "groupBox6";
@@ -175,17 +179,18 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Image de fond";
             // 
-            // numericUpDown2
+            // nud_row
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(205, 22);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(51, 27);
-            this.numericUpDown2.TabIndex = 8;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.nud_row.Location = new System.Drawing.Point(205, 22);
+            this.nud_row.Name = "nud_row";
+            this.nud_row.Size = new System.Drawing.Size(51, 27);
+            this.nud_row.TabIndex = 8;
+            this.nud_row.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.nud_row.ValueChanged += new System.EventHandler(this.nud_row_ValueChanged);
             // 
             // label4
             // 
@@ -196,17 +201,18 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Lignes";
             // 
-            // numericUpDown1
+            // nud_col
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(91, 22);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(51, 27);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nud_col.Location = new System.Drawing.Point(91, 22);
+            this.nud_col.Name = "nud_col";
+            this.nud_col.Size = new System.Drawing.Size(51, 27);
+            this.nud_col.TabIndex = 6;
+            this.nud_col.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.nud_col.ValueChanged += new System.EventHandler(this.nud_col_ValueChanged);
             // 
             // label3
             // 
@@ -338,6 +344,9 @@
             this.enregistrerProjetToolStripMenuItem,
             this.toolStripSeparator1,
             this.configurationToolStripMenuItem,
+            this.chargerConfigToolStripMenuItem,
+            this.enregistrerConfigToolStripMenuItem,
+            this.enregistrerConfigSousToolStripMenuItem,
             this.toolStripSeparator2,
             this.quiterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
@@ -347,36 +356,57 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(244, 26);
             this.toolStripMenuItem1.Text = "&Charger projet";
             // 
             // enregistrerProjetToolStripMenuItem
             // 
             this.enregistrerProjetToolStripMenuItem.Name = "enregistrerProjetToolStripMenuItem";
-            this.enregistrerProjetToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.enregistrerProjetToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.enregistrerProjetToolStripMenuItem.Text = "&Enregistrer projet";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(241, 6);
             // 
             // configurationToolStripMenuItem
             // 
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.configurationToolStripMenuItem.Text = "&Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
+            // 
+            // chargerConfigToolStripMenuItem
+            // 
+            this.chargerConfigToolStripMenuItem.Name = "chargerConfigToolStripMenuItem";
+            this.chargerConfigToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.chargerConfigToolStripMenuItem.Text = "C&harger Config";
+            this.chargerConfigToolStripMenuItem.Click += new System.EventHandler(this.chargerConfigToolStripMenuItem_Click);
+            // 
+            // enregistrerConfigToolStripMenuItem
+            // 
+            this.enregistrerConfigToolStripMenuItem.Name = "enregistrerConfigToolStripMenuItem";
+            this.enregistrerConfigToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.enregistrerConfigToolStripMenuItem.Text = "E&nregistrer Config";
+            this.enregistrerConfigToolStripMenuItem.Click += new System.EventHandler(this.enregistrerConfigToolStripMenuItem_Click);
+            // 
+            // enregistrerConfigSousToolStripMenuItem
+            // 
+            this.enregistrerConfigSousToolStripMenuItem.Name = "enregistrerConfigSousToolStripMenuItem";
+            this.enregistrerConfigSousToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.enregistrerConfigSousToolStripMenuItem.Text = "En&registrer Config sous";
+            this.enregistrerConfigSousToolStripMenuItem.Click += new System.EventHandler(this.enregistrerConfigSousToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(241, 6);
             // 
             // quiterToolStripMenuItem
             // 
             this.quiterToolStripMenuItem.Name = "quiterToolStripMenuItem";
-            this.quiterToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.quiterToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.quiterToolStripMenuItem.Text = "&Quiter";
             this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
             // 
@@ -447,7 +477,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "&Parcourir";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // outputPath
             // 
@@ -480,6 +510,7 @@
             this.executeTransfoButton.TabIndex = 4;
             this.executeTransfoButton.Text = "&Executer";
             this.executeTransfoButton.UseVisualStyleBackColor = true;
+            this.executeTransfoButton.Click += new System.EventHandler(this.executeTransfoButton_Click);
             // 
             // groupBox7
             // 
@@ -536,8 +567,8 @@
             this.groupBox8.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_row)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_col)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -585,9 +616,9 @@
         private ComboBox backImageComboBox;
         private RadioButton rb_background_embed;
         private GroupBox groupBox6;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown nud_row;
         private Label label4;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown nud_col;
         private Label label3;
         private SaveFileDialog saveFileDialog1;
         private GroupBox groupBox8;
@@ -600,5 +631,8 @@
         private GroupBox groupBox7;
         private ComboBox comboBox1;
         private Label label1;
+        private ToolStripMenuItem chargerConfigToolStripMenuItem;
+        private ToolStripMenuItem enregistrerConfigToolStripMenuItem;
+        private ToolStripMenuItem enregistrerConfigSousToolStripMenuItem;
     }
 }
