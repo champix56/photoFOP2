@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" exclude-result-prefixes="fo">
-<xsl:param name="outputType"><xsl:choose>
-	<xsl:when test="/photos/config/output"><xsl:value-of select="/photos/config/output"/></xsl:when>
-	<xsl:otherwise>xml</xsl:otherwise>
-</xsl:choose></xsl:param>
+	<xsl:param name="outputType">
+		<xsl:choose>
+			<xsl:when test="/photos/config/output">
+				<xsl:value-of select="/photos/config/output"/>
+			</xsl:when>
+			<xsl:otherwise>xml</xsl:otherwise>
+		</xsl:choose>
+	</xsl:param>
 	<xsl:output method="xml" indent="yes" version="1.0"/>
 	<!--global configuration-->
 	<xsl:param name="defaultUnit">mm</xsl:param>
@@ -25,7 +29,7 @@
 		<xsl:for-each select="$imagesList[(position()-1) mod $tableRows = 0]">
 			<fo:table-row height="{concat($rowHeight,$defaultUnit)}">
 				<xsl:for-each select=".|following-sibling::image[position() &lt; $tableCols]">
-					<fo:table-cell width="{concat($colWidth,$defaultUnit)}" border="0.5mm solid black">
+					<fo:table-cell width="{concat($colWidth,$defaultUnit)}">
 						<xsl:apply-templates select="."/>
 					</fo:table-cell>
 				</xsl:for-each>
@@ -38,9 +42,7 @@
 				<fo:simple-page-master master-name="A4" page-height="{concat($paperHeight,$defaultUnit)}" page-width="{concat($paperWidth,$defaultUnit)}">
 					<xsl:element name="fo:region-body">
 						<xsl:if test="/photos/config/backgroundAlpha/image">
-							<xsl:attribute name="background-image">
-								<xsl:value-of select="concat(/photos/config/backgroundAlpha/image/@path,photos/config/backgroundAlpha/image/@href)"/>
-							</xsl:attribute>
+							<xsl:attribute name="background-image"><xsl:value-of select="concat(/photos/config/backgroundAlpha/image/@path,photos/config/backgroundAlpha/image/@href)"/></xsl:attribute>
 						</xsl:if>
 					</xsl:element>
 				</fo:simple-page-master>
@@ -93,7 +95,7 @@
 	</xsl:template>
 	<xsl:template match="pages//image">
 		<fo:block text-align="center" padding-top="0.5mm">
-			<fo:external-graphic src="{@path}{@href}" scaling="uniform" content-height="{concat((($rowHeight - 0.5)*0.9),$defaultUnit)}" content-width="{concat(($colWidth - 1),$defaultUnit)}"/>
+			<fo:external-graphic src="{@path}{@href}" scaling="uniform" content-height="{concat((($rowHeight - 1)*0.9),$defaultUnit)}" content-width="{concat(($colWidth - 1),$defaultUnit)}"/>
 			<fo:block/>
 			<xsl:apply-templates select="*|text()"/>
 		</fo:block>
