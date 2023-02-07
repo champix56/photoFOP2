@@ -89,7 +89,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(573, 423);
+            this.splitContainer1.Size = new System.Drawing.Size(625, 423);
             this.splitContainer1.SplitterDistance = 383;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
@@ -103,7 +103,7 @@
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(548, 62);
+            this.groupBox6.Size = new System.Drawing.Size(600, 62);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Generation XML";
@@ -130,7 +130,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(548, 146);
+            this.groupBox2.Size = new System.Drawing.Size(600, 146);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fop construction options";
@@ -142,7 +142,7 @@
             this.groupBox3.Controls.Add(this.nud_back_dpi);
             this.groupBox3.Controls.Add(this.r_extendback);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(234, 21);
+            this.groupBox3.Location = new System.Drawing.Point(260, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(108, 115);
             this.groupBox3.TabIndex = 3;
@@ -211,7 +211,7 @@
             this.groupBox4.Controls.Add(this.ch_intercalaire);
             this.groupBox4.Controls.Add(this.ch_footerEachPage);
             this.groupBox4.Controls.Add(this.ch_titleEachPage);
-            this.groupBox4.Location = new System.Drawing.Point(364, 29);
+            this.groupBox4.Location = new System.Drawing.Point(416, 29);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -361,7 +361,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(468, 32);
+            this.button1.Location = new System.Drawing.Point(520, 32);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 22);
@@ -376,7 +376,7 @@
             this.fopPathInput.Location = new System.Drawing.Point(10, 32);
             this.fopPathInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fopPathInput.Name = "fopPathInput";
-            this.fopPathInput.Size = new System.Drawing.Size(453, 23);
+            this.fopPathInput.Size = new System.Drawing.Size(505, 23);
             this.fopPathInput.TabIndex = 1;
             // 
             // label1
@@ -397,13 +397,13 @@
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(507, 33);
+            this.panel1.Size = new System.Drawing.Size(559, 33);
             this.panel1.TabIndex = 0;
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(348, 7);
+            this.okButton.Location = new System.Drawing.Point(400, 7);
             this.okButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(82, 22);
@@ -415,7 +415,7 @@
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.Location = new System.Drawing.Point(261, 7);
+            this.cancelButton.Location = new System.Drawing.Point(313, 7);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(82, 22);
@@ -434,7 +434,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(573, 423);
+            this.ClientSize = new System.Drawing.Size(625, 423);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

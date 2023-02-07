@@ -39,6 +39,10 @@ namespace photoFOP2
         public ImageXML backImageNoAlpha { get; set; }
         [System.Xml.Serialization.XmlElement("backImageAlpha")]
         public ImageXML backImageAlpha { get; set; }
+        [System.Xml.Serialization.XmlElement("couv")]
+        public bool couv { get; set; }
+        [System.Xml.Serialization.XmlElement("couv4eme")]
+        public bool couv4eme { get; set; }
         public LowConfig()
         {
             dimensionPapierX = 210.0M;
@@ -52,6 +56,8 @@ namespace photoFOP2
             cols = 1;
             backImageAlpha = new ImageXML();
             backImageNoAlpha = new ImageXML();
+            couv = true;
+            couv4eme= true;
             
         }
         public void writeXMLConfig(XmlWriter writer)
@@ -62,11 +68,13 @@ namespace photoFOP2
             writer.WriteElementString("footerEachPages", footerEachPage.ToString());
             writer.WriteElementString("titleEachPages", titleEachPage.ToString());
             writer.WriteElementString("intercal", intercalaire.ToString());
+            writer.WriteElementString("couv", couv.ToString());
+            writer.WriteElementString("couv4eme", couv4eme.ToString());
             writer.WriteElementString("defaultUnit", defaultUnit.ToString());
             writer.WriteElementString("height", this.dimensionPapierY.ToString("#.0").Replace(',','.'));
             writer.WriteElementString("width", this.dimensionPapierX.ToString("#.0").Replace(',', '.'));
             writer.WriteElementString("outputType", this.outputType);
-            writer.WriteStartElement("backgroundAlpha");
+              writer.WriteStartElement("backgroundAlpha");
             backImageAlpha.writeXmlElement(writer);
             writer.WriteEndElement();
             writer.WriteStartElement("backgroundNoAlpha");
@@ -106,21 +114,29 @@ namespace photoFOP2
             withConfig = true;
             isolateImagesOnPages = false;
             extendBack = true;
+            outputpath = "";
+            backDPI = 300;
         }
         public void save()
         {
-            save(configFileName);
+            save(System.IO.Directory.GetCurrentDirectory()+"\\"+configFileName);
         }
         public void save(string filename)
         {
-            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(this.GetType());
-            // Create an XmlTextWriter using a FileStream.
-            Stream fs = new FileStream(filename, FileMode.Create);
-            System.Xml.XmlWriter writer =
-            new System.Xml.XmlTextWriter(fs, Encoding.Unicode);
-            // Serialize using the XmlTextWriter.
-            x.Serialize(writer, this);
-            fs.Close();
+            try
+            {
+                System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(this.GetType());
+                // Create an XmlTextWriter using a FileStream.
+                Stream fs = new FileStream(filename, FileMode.Create);
+                System.Xml.XmlWriter writer =
+                new System.Xml.XmlTextWriter(fs, Encoding.Unicode);
+                // Serialize using the XmlTextWriter.
+                x.Serialize(writer, this);
+                fs.Close();
+                fs.Dispose();
+            }catch(Exception ex) { 
+                Console.WriteLine(ex.ToString()+"\n\n"+filename); 
+            }
         }
         public void load()
         {
@@ -159,6 +175,8 @@ namespace photoFOP2
                     extendBack=config.extendBack;
                     outputpath=config.outputpath;
                     outputType=config.outputType;
+                    couv = config.couv;
+                    couv4eme=config.couv4eme;
                     reader.Close();
                 }
             }catch(Exception e) { System.Console.Out.Write(e.StackTrace); return false; }

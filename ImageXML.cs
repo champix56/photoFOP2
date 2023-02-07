@@ -17,6 +17,10 @@ namespace photoFOP2
             this.href = href;
             this.comment = comment;
         }
+        public string getFullPath()
+        {
+            return this.path+this.href;
+        }
         [System.Xml.Serialization.XmlAttribute("path")]
         public string path{ get; set; }
         [System.Xml.Serialization.XmlAttribute("href")]

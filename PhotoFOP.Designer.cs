@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.t_xsl_imported = new System.Windows.Forms.TextBox();
@@ -62,7 +61,6 @@
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -76,7 +74,27 @@
             this.ch_openOnEnd = new System.Windows.Forms.CheckBox();
             this.cb_outputMethod = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tab_option = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.t_title = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ch_intercal = new System.Windows.Forms.CheckBox();
+            this.ch_4couv = new System.Windows.Forms.CheckBox();
+            this.ch_couv = new System.Windows.Forms.CheckBox();
+            this.tab_config = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tab_content = new System.Windows.Forms.TabPage();
+            this.tab_couv = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.l_couv_image = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tab_4emeCouv = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.l_4couv_image = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_row)).BeginInit();
@@ -84,27 +102,18 @@
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tab_option.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tab_config.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tab_content.SuspendLayout();
+            this.tab_couv.SuspendLayout();
+            this.tab_4emeCouv.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.groupBox8);
-            this.groupBox1.Controls.Add(this.groupBox6);
-            this.groupBox1.Controls.Add(this.groupBox5);
-            this.groupBox1.Location = new System.Drawing.Point(270, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(445, 152);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Options";
             // 
             // groupBox8
             // 
@@ -114,7 +123,7 @@
             this.groupBox8.Controls.Add(this.rb_xsl_imported);
             this.groupBox8.Controls.Add(this.cb_embed_xsl);
             this.groupBox8.Controls.Add(this.rb_xsl_embed);
-            this.groupBox8.Location = new System.Drawing.Point(259, 22);
+            this.groupBox8.Location = new System.Drawing.Point(6, 12);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -186,14 +195,14 @@
             this.groupBox6.Controls.Add(this.label4);
             this.groupBox6.Controls.Add(this.nud_col);
             this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Location = new System.Drawing.Point(5, 22);
+            this.groupBox6.Location = new System.Drawing.Point(6, 5);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Size = new System.Drawing.Size(248, 44);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Image de fond";
+            this.groupBox6.Text = "disposition";
             // 
             // nud_row
             // 
@@ -203,7 +212,7 @@
             this.nud_row.Size = new System.Drawing.Size(45, 23);
             this.nud_row.TabIndex = 8;
             this.nud_row.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -226,7 +235,7 @@
             this.nud_col.Size = new System.Drawing.Size(45, 23);
             this.nud_col.TabIndex = 6;
             this.nud_col.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -249,18 +258,19 @@
             this.groupBox5.Controls.Add(this.rb_background_imported);
             this.groupBox5.Controls.Add(this.backImageComboBox);
             this.groupBox5.Controls.Add(this.rb_background_embed);
-            this.groupBox5.Location = new System.Drawing.Point(5, 76);
+            this.groupBox5.Location = new System.Drawing.Point(10, 119);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(248, 71);
+            this.groupBox5.Size = new System.Drawing.Size(232, 71);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Image de fond";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(176, 39);
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(160, 39);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(53, 22);
@@ -271,10 +281,12 @@
             // 
             // backgroundFileNameTextInput
             // 
+            this.backgroundFileNameTextInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.backgroundFileNameTextInput.Location = new System.Drawing.Point(88, 40);
             this.backgroundFileNameTextInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backgroundFileNameTextInput.Name = "backgroundFileNameTextInput";
-            this.backgroundFileNameTextInput.Size = new System.Drawing.Size(84, 23);
+            this.backgroundFileNameTextInput.Size = new System.Drawing.Size(68, 23);
             this.backgroundFileNameTextInput.TabIndex = 3;
             this.backgroundFileNameTextInput.TextChanged += new System.EventHandler(this.backGroundImageChange);
             // 
@@ -291,13 +303,15 @@
             // 
             // backImageComboBox
             // 
+            this.backImageComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.backImageComboBox.FormattingEnabled = true;
             this.backImageComboBox.Items.AddRange(new object[] {
             "aucune"});
             this.backImageComboBox.Location = new System.Drawing.Point(101, 16);
             this.backImageComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backImageComboBox.Name = "backImageComboBox";
-            this.backImageComboBox.Size = new System.Drawing.Size(129, 23);
+            this.backImageComboBox.Size = new System.Drawing.Size(113, 23);
             this.backImageComboBox.TabIndex = 1;
             this.backImageComboBox.SelectedIndexChanged += new System.EventHandler(this.backGroundImageChange);
             // 
@@ -455,21 +469,6 @@
             this.aProposToolStripMenuItem.Text = "A propos";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(10, 211);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(704, 192);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "FIchiers seletionnée(s)";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -477,13 +476,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 20);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 5);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(691, 168);
+            this.dataGridView1.Size = new System.Drawing.Size(680, 166);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox4
@@ -519,6 +518,7 @@
             // 
             this.outputPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputPath.BackColor = System.Drawing.SystemColors.Window;
             this.outputPath.Location = new System.Drawing.Point(5, 44);
             this.outputPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.outputPath.Name = "outputPath";
@@ -553,18 +553,19 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.BackColor = System.Drawing.Color.Transparent;
             this.groupBox7.Controls.Add(this.ch_openOnEnd);
             this.groupBox7.Controls.Add(this.cb_outputMethod);
             this.groupBox7.Controls.Add(this.label1);
-            this.groupBox7.Location = new System.Drawing.Point(10, 120);
+            this.groupBox7.Location = new System.Drawing.Point(221, 12);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox7.Size = new System.Drawing.Size(232, 74);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Transformer";
+            this.groupBox7.Text = "Sortie";
             // 
             // ch_openOnEnd
             // 
@@ -602,23 +603,252 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Type de sortie";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tab_option);
+            this.tabControl1.Controls.Add(this.tab_config);
+            this.tabControl1.Location = new System.Drawing.Point(247, 33);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(467, 173);
+            this.tabControl1.TabIndex = 6;
+            // 
+            // tab_option
+            // 
+            this.tab_option.Controls.Add(this.label5);
+            this.tab_option.Controls.Add(this.t_title);
+            this.tab_option.Controls.Add(this.groupBox1);
+            this.tab_option.Controls.Add(this.groupBox6);
+            this.tab_option.Location = new System.Drawing.Point(4, 24);
+            this.tab_option.Name = "tab_option";
+            this.tab_option.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_option.Size = new System.Drawing.Size(459, 145);
+            this.tab_option.TabIndex = 0;
+            this.tab_option.Text = "Options";
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(3, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(450, 15);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "titre de l\'album";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // t_title
+            // 
+            this.t_title.Location = new System.Drawing.Point(3, 116);
+            this.t_title.Name = "t_title";
+            this.t_title.Size = new System.Drawing.Size(450, 23);
+            this.t_title.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ch_intercal);
+            this.groupBox1.Controls.Add(this.ch_4couv);
+            this.groupBox1.Controls.Add(this.ch_couv);
+            this.groupBox1.Location = new System.Drawing.Point(306, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(147, 85);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Construction";
+            // 
+            // ch_intercal
+            // 
+            this.ch_intercal.AutoSize = true;
+            this.ch_intercal.Checked = true;
+            this.ch_intercal.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ch_intercal.Location = new System.Drawing.Point(9, 43);
+            this.ch_intercal.Name = "ch_intercal";
+            this.ch_intercal.Size = new System.Drawing.Size(89, 19);
+            this.ch_intercal.TabIndex = 2;
+            this.ch_intercal.Text = "Intercalaires";
+            this.ch_intercal.UseVisualStyleBackColor = true;
+            this.ch_intercal.CheckedChanged += new System.EventHandler(this.ch_intercal_CheckedChanged);
+            // 
+            // ch_4couv
+            // 
+            this.ch_4couv.AutoSize = true;
+            this.ch_4couv.Checked = true;
+            this.ch_4couv.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ch_4couv.Location = new System.Drawing.Point(9, 66);
+            this.ch_4couv.Name = "ch_4couv";
+            this.ch_4couv.Size = new System.Drawing.Size(131, 19);
+            this.ch_4couv.TabIndex = 1;
+            this.ch_4couv.Text = "4eme de couverture";
+            this.ch_4couv.UseVisualStyleBackColor = true;
+            this.ch_4couv.CheckedChanged += new System.EventHandler(this.ch_4couv_CheckedChanged);
+            // 
+            // ch_couv
+            // 
+            this.ch_couv.AutoSize = true;
+            this.ch_couv.Checked = true;
+            this.ch_couv.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ch_couv.Location = new System.Drawing.Point(11, 18);
+            this.ch_couv.Name = "ch_couv";
+            this.ch_couv.Size = new System.Drawing.Size(85, 19);
+            this.ch_couv.TabIndex = 0;
+            this.ch_couv.Text = "Couverture";
+            this.ch_couv.UseVisualStyleBackColor = true;
+            this.ch_couv.CheckedChanged += new System.EventHandler(this.ch_couv_CheckedChanged);
+            // 
+            // tab_config
+            // 
+            this.tab_config.Controls.Add(this.groupBox8);
+            this.tab_config.Controls.Add(this.groupBox7);
+            this.tab_config.Location = new System.Drawing.Point(4, 24);
+            this.tab_config.Name = "tab_config";
+            this.tab_config.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_config.Size = new System.Drawing.Size(459, 145);
+            this.tab_config.TabIndex = 1;
+            this.tab_config.Text = "Configuration";
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl2.Controls.Add(this.tab_content);
+            this.tabControl2.Controls.Add(this.tab_couv);
+            this.tabControl2.Controls.Add(this.tab_4emeCouv);
+            this.tabControl2.Location = new System.Drawing.Point(10, 209);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(700, 204);
+            this.tabControl2.TabIndex = 7;
+            // 
+            // tab_content
+            // 
+            this.tab_content.Controls.Add(this.dataGridView1);
+            this.tab_content.Location = new System.Drawing.Point(4, 24);
+            this.tab_content.Name = "tab_content";
+            this.tab_content.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_content.Size = new System.Drawing.Size(692, 176);
+            this.tab_content.TabIndex = 0;
+            this.tab_content.Text = "Pages";
+            this.tab_content.UseVisualStyleBackColor = true;
+            // 
+            // tab_couv
+            // 
+            this.tab_couv.Controls.Add(this.button1);
+            this.tab_couv.Controls.Add(this.l_couv_image);
+            this.tab_couv.Controls.Add(this.label6);
+            this.tab_couv.Location = new System.Drawing.Point(4, 24);
+            this.tab_couv.Name = "tab_couv";
+            this.tab_couv.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_couv.Size = new System.Drawing.Size(692, 176);
+            this.tab_couv.TabIndex = 1;
+            this.tab_couv.Text = "Couverture";
+            this.tab_couv.UseVisualStyleBackColor = true;
+            this.tab_couv.Click += new System.EventHandler(this.load_couv_image_clicked);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(466, 67);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 43);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Charger une image";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.load_couv_image_clicked);
+            // 
+            // l_couv_image
+            // 
+            this.l_couv_image.BackColor = System.Drawing.Color.DimGray;
+            this.l_couv_image.Location = new System.Drawing.Point(57, 30);
+            this.l_couv_image.Name = "l_couv_image";
+            this.l_couv_image.Size = new System.Drawing.Size(243, 127);
+            this.l_couv_image.TabIndex = 1;
+            this.l_couv_image.Click += new System.EventHandler(this.load_couv_image_clicked);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(112, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Image de couverture";
+            // 
+            // tab_4emeCouv
+            // 
+            this.tab_4emeCouv.Controls.Add(this.label9);
+            this.tab_4emeCouv.Controls.Add(this.textBox1);
+            this.tab_4emeCouv.Controls.Add(this.button2);
+            this.tab_4emeCouv.Controls.Add(this.l_4couv_image);
+            this.tab_4emeCouv.Controls.Add(this.label8);
+            this.tab_4emeCouv.Location = new System.Drawing.Point(4, 24);
+            this.tab_4emeCouv.Name = "tab_4emeCouv";
+            this.tab_4emeCouv.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_4emeCouv.Size = new System.Drawing.Size(692, 176);
+            this.tab_4emeCouv.TabIndex = 2;
+            this.tab_4emeCouv.Text = "4eme de couverture";
+            this.tab_4emeCouv.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(349, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(154, 15);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "text de 4eme  de couverture";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(276, 35);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(311, 127);
+            this.textBox1.TabIndex = 6;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(608, 70);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 43);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Charger une image";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.load_4couv_image_clicked);
+            // 
+            // l_4couv_image
+            // 
+            this.l_4couv_image.BackColor = System.Drawing.Color.DimGray;
+            this.l_4couv_image.Location = new System.Drawing.Point(19, 35);
+            this.l_4couv_image.Name = "l_4couv_image";
+            this.l_4couv_image.Size = new System.Drawing.Size(243, 127);
+            this.l_4couv_image.TabIndex = 4;
+            this.l_4couv_image.Click += new System.EventHandler(this.load_4couv_image_clicked);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(56, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(167, 15);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Image de 4eme  de couverture";
+            // 
             // PhotoFOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 499);
-            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.executeTransfoButton);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PhotoFOP";
             this.Text = "PhotoFOP 2";
-            this.groupBox1.ResumeLayout(false);
+            this.Resize += new System.EventHandler(this.PhotoFOP_Resize);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -630,20 +860,29 @@
             this.groupBox2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tab_option.ResumeLayout(false);
+            this.tab_option.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tab_config.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tab_content.ResumeLayout(false);
+            this.tab_couv.ResumeLayout(false);
+            this.tab_couv.PerformLayout();
+            this.tab_4emeCouv.ResumeLayout(false);
+            this.tab_4emeCouv.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Button b_addDirectory;
         private Button b_addFile;
@@ -657,7 +896,6 @@
         private ToolStripMenuItem quiterToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem aProposToolStripMenuItem;
-        private GroupBox groupBox3;
         private GroupBox groupBox4;
         private Button button3;
         private TextBox outputPath;
@@ -696,5 +934,26 @@
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton toolStripButton1;
         private CheckBox ch_openOnEnd;
+        private TabControl tabControl1;
+        private TabPage tab_option;
+        private GroupBox groupBox1;
+        private CheckBox ch_intercal;
+        private CheckBox ch_4couv;
+        private CheckBox ch_couv;
+        private TabPage tab_config;
+        private TabControl tabControl2;
+        private TabPage tab_content;
+        private TabPage tab_couv;
+        private TabPage tab_4emeCouv;
+        private Label label5;
+        private TextBox t_title;
+        private Button button1;
+        private Label l_couv_image;
+        private Label label6;
+        private Label label9;
+        private TextBox textBox1;
+        private Button button2;
+        private Label l_4couv_image;
+        private Label label8;
     }
 }
