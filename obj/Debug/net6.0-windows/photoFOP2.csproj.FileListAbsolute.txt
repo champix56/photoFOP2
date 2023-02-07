@@ -68,4 +68,6 @@ C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Resso
 C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Ressources\FOP1.0\lib\xmlgraphics-commons-1.4.jar
 C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Ressources\FOP1.0\lib\xmlgraphics-commons.LICENSE.txt
 C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Ressources\FOP1.0\lib\xmlgraphics-commons.NOTICE.txt
-C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Ressources\xsl\MasterFOPAlbum.xsl
+C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Ressources\xsl\masterXHTML.xsl
+C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Ressources\xsl\MasterFOP2.0.xsl
+C:\Users\champix\source\repos\photoFOP2\photoFOP2\bin\Debug\net6.0-windows\Ressources\xsl\oldFOP.xsl

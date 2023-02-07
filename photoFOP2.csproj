@@ -11,7 +11,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Update="Ressources\xsl\MasterFOPAlbum.xsl">
+		<None Update="Ressources\xsl\MasterFOP2.0.xsl">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Ressources\xsl\oldFOP.xsl">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 		<None Update="Ressources\FOP1.0\build\fop.jar">
@@ -165,6 +168,9 @@
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 		<None Update="Ressources\images\urbain2-s.jpg">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Ressources\xsl\masterXHTML.xsl">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
