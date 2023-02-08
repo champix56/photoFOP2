@@ -171,7 +171,9 @@ namespace photoFOP2
         }
         private void backGroundImageChange(object sender, EventArgs e)
         {
-            if (config == null) return;
+           
+            if (config == null) return; 
+            if(BackgroundImage!=null)BackgroundImage.Dispose();
             string item = null;
             if (sender.GetType().Name == "ComboBox")
             {
@@ -197,18 +199,20 @@ namespace photoFOP2
                 return;
             }
 
-            
-            /*this.config.backImage.href = item.Substring(item.LastIndexOf('\\')+1);
+            else
+            {
+                /*this.config.backImage.href = item.Substring(item.LastIndexOf('\\')+1);
             this.config.backImage.path = item.Substring(0,item.LastIndexOf('\\')+1);
             */
-            BackImageTreatment bi = new BackImageTreatment(
-               item,
-               System.IO.Directory.GetCurrentDirectory() + "outimg",
-               (int)(config.dimensionPapierX),
-               (int)(config.dimensionPapierY),
-               ref config
-               );
-            bi.createRatioImage();
+                BackImageTreatment bi = new BackImageTreatment(
+                   item,
+                   System.IO.Directory.GetCurrentDirectory() + "outimg",
+                   (int)(config.dimensionPapierX),
+                   (int)(config.dimensionPapierY),
+                   ref config
+                   );
+                bi.createRatioImage();
+            }
             if (this.config.backImageNoAlpha == null)
             {
                 this.config.backImageNoAlpha = new ImageXML();
@@ -217,7 +221,7 @@ namespace photoFOP2
                 this.config.save();
                 return;
             }
-            if (this.BackgroundImage != null) this.BackgroundImage.Dispose();// = null;
+            //if (this.BackgroundImage != null) this.BackgroundImage.Dispose();// = null;
 
 
             System.IO.File.Copy(
@@ -459,13 +463,18 @@ namespace photoFOP2
 
         private void PhotoFOP_Resize(object sender, EventArgs e)
         {
+            if (this.BackgroundImage !=null) { this.BackgroundImage.Dispose(); }
             if (System.IO.File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\TEMP\\windowBack.png"))
             {
-                Image image = new Bitmap(Image.FromFile(
-                                System.IO.Directory.GetCurrentDirectory() + "\\TEMP\\windowBack.png"
-                                ), this.Size);
-                this.BackgroundImage = image;
+                using (var bmpTemp = new Bitmap(System.IO.Directory.GetCurrentDirectory() + "\\TEMP\\windowBack.png"))
+                {
+                    Image image = new Bitmap(bmpTemp,this.Size);
+                    this.BackgroundImage = image;
+                    bmpTemp.Dispose();
+                }
+
             }
         }
+
     }
 }

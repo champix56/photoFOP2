@@ -38,7 +38,6 @@
             this.r_extendback = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.ch_intercalaire = new System.Windows.Forms.CheckBox();
             this.ch_footerEachPage = new System.Windows.Forms.CheckBox();
             this.ch_titleEachPage = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,7 +50,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.fopPathInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -67,7 +65,6 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_height)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_width)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -88,7 +85,8 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Panel2.Controls.Add(this.okButton);
+            this.splitContainer1.Panel2.Controls.Add(this.cancelButton);
             this.splitContainer1.Size = new System.Drawing.Size(625, 423);
             this.splitContainer1.SplitterDistance = 383;
             this.splitContainer1.SplitterWidth = 3;
@@ -142,7 +140,7 @@
             this.groupBox3.Controls.Add(this.nud_back_dpi);
             this.groupBox3.Controls.Add(this.r_extendback);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(260, 21);
+            this.groupBox3.Location = new System.Drawing.Point(252, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(108, 115);
             this.groupBox3.TabIndex = 3;
@@ -208,28 +206,16 @@
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.ch_intercalaire);
             this.groupBox4.Controls.Add(this.ch_footerEachPage);
             this.groupBox4.Controls.Add(this.ch_titleEachPage);
-            this.groupBox4.Location = new System.Drawing.Point(416, 29);
+            this.groupBox4.Location = new System.Drawing.Point(416, 21);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(178, 107);
+            this.groupBox4.Size = new System.Drawing.Size(178, 84);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "construction pages";
-            // 
-            // ch_intercalaire
-            // 
-            this.ch_intercalaire.AutoSize = true;
-            this.ch_intercalaire.Location = new System.Drawing.Point(14, 73);
-            this.ch_intercalaire.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ch_intercalaire.Name = "ch_intercalaire";
-            this.ch_intercalaire.Size = new System.Drawing.Size(89, 19);
-            this.ch_intercalaire.TabIndex = 2;
-            this.ch_intercalaire.Text = "Intercalaires";
-            this.ch_intercalaire.UseVisualStyleBackColor = true;
             // 
             // ch_footerEachPage
             // 
@@ -388,22 +374,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "FOP Path";
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.okButton);
-            this.panel1.Controls.Add(this.cancelButton);
-            this.panel1.Location = new System.Drawing.Point(0, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(559, 33);
-            this.panel1.TabIndex = 0;
-            // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(400, 7);
+            this.okButton.Location = new System.Drawing.Point(540, 13);
             this.okButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(82, 22);
@@ -415,7 +389,7 @@
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.Location = new System.Drawing.Point(313, 7);
+            this.cancelButton.Location = new System.Drawing.Point(3, 13);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(82, 22);
@@ -457,7 +431,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_height)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_width)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -466,7 +439,6 @@
 
         private SplitContainer splitContainer1;
         private Label label1;
-        private Panel panel1;
         private Button okButton;
         private Button cancelButton;
         private Button button1;
@@ -474,7 +446,6 @@
         private OpenFileDialog openFileDialog1;
         private GroupBox groupBox2;
         private GroupBox groupBox4;
-        private CheckBox ch_intercalaire;
         private CheckBox ch_footerEachPage;
         private CheckBox ch_titleEachPage;
         private GroupBox groupBox1;

@@ -36,7 +36,6 @@ namespace photoFOP2
             this.nud_width.Value = this.config.dimensionPapierX;
             this.cb_unit.SelectedItem= this.config.defaultUnit;
             this.ch_footerEachPage.Checked = this.config.footerEachPage;
-            this.ch_intercalaire.Checked = this.config.intercalaire;
             this.ch_titleEachPage.Checked = this.config.titleEachPage;
             this.nud_back_dpi.Value = this.config.backDPI;
             ch_isolatePages.Checked = config.isolateImagesOnPages;
@@ -66,9 +65,7 @@ namespace photoFOP2
             config.defaultUnit = cb_unit.SelectedItem!=null? cb_unit.SelectedItem.ToString():"mm";
             config.isolateImagesOnPages = ch_isolatePages.Checked;
             config.footerEachPage = ch_footerEachPage.Checked;
-            config.intercalaire = ch_intercalaire.Checked;
             config.titleEachPage= ch_titleEachPage.Checked;
-
             config.extendBack=r_extendback.Checked;
             
             this.config.save();
