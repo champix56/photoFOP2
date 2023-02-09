@@ -123,21 +123,18 @@
             this.groupBox8.Controls.Add(this.rb_xsl_imported);
             this.groupBox8.Controls.Add(this.cb_embed_xsl);
             this.groupBox8.Controls.Add(this.rb_xsl_embed);
-            this.groupBox8.Location = new System.Drawing.Point(6, 12);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Location = new System.Drawing.Point(7, 16);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(181, 125);
+            this.groupBox8.Size = new System.Drawing.Size(207, 167);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Transformation";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(122, 93);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(139, 124);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(53, 22);
+            this.button5.Size = new System.Drawing.Size(61, 29);
             this.button5.TabIndex = 4;
             this.button5.Text = "find";
             this.button5.UseVisualStyleBackColor = true;
@@ -145,20 +142,18 @@
             // 
             // t_xsl_imported
             // 
-            this.t_xsl_imported.Location = new System.Drawing.Point(5, 95);
-            this.t_xsl_imported.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.t_xsl_imported.Location = new System.Drawing.Point(6, 127);
             this.t_xsl_imported.Name = "t_xsl_imported";
-            this.t_xsl_imported.Size = new System.Drawing.Size(112, 23);
+            this.t_xsl_imported.Size = new System.Drawing.Size(127, 27);
             this.t_xsl_imported.TabIndex = 3;
             this.t_xsl_imported.TextChanged += new System.EventHandler(this.xsl_file_change);
             // 
             // rb_xsl_imported
             // 
             this.rb_xsl_imported.AutoSize = true;
-            this.rb_xsl_imported.Location = new System.Drawing.Point(5, 68);
-            this.rb_xsl_imported.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rb_xsl_imported.Location = new System.Drawing.Point(6, 91);
             this.rb_xsl_imported.Name = "rb_xsl_imported";
-            this.rb_xsl_imported.Size = new System.Drawing.Size(71, 19);
+            this.rb_xsl_imported.Size = new System.Drawing.Size(88, 24);
             this.rb_xsl_imported.TabIndex = 2;
             this.rb_xsl_imported.Text = "Importer";
             this.rb_xsl_imported.UseVisualStyleBackColor = true;
@@ -167,10 +162,9 @@
             // cb_embed_xsl
             // 
             this.cb_embed_xsl.FormattingEnabled = true;
-            this.cb_embed_xsl.Location = new System.Drawing.Point(5, 42);
-            this.cb_embed_xsl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_embed_xsl.Location = new System.Drawing.Point(6, 56);
             this.cb_embed_xsl.Name = "cb_embed_xsl";
-            this.cb_embed_xsl.Size = new System.Drawing.Size(171, 23);
+            this.cb_embed_xsl.Size = new System.Drawing.Size(195, 28);
             this.cb_embed_xsl.TabIndex = 1;
             this.cb_embed_xsl.SelectedIndexChanged += new System.EventHandler(this.xsl_file_change);
             // 
@@ -178,10 +172,9 @@
             // 
             this.rb_xsl_embed.AutoSize = true;
             this.rb_xsl_embed.Checked = true;
-            this.rb_xsl_embed.Location = new System.Drawing.Point(5, 20);
-            this.rb_xsl_embed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rb_xsl_embed.Location = new System.Drawing.Point(6, 27);
             this.rb_xsl_embed.Name = "rb_xsl_embed";
-            this.rb_xsl_embed.Size = new System.Drawing.Size(83, 19);
+            this.rb_xsl_embed.Size = new System.Drawing.Size(103, 24);
             this.rb_xsl_embed.TabIndex = 0;
             this.rb_xsl_embed.TabStop = true;
             this.rb_xsl_embed.Text = "Embarquer";
@@ -195,21 +188,18 @@
             this.groupBox6.Controls.Add(this.label4);
             this.groupBox6.Controls.Add(this.nud_col);
             this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Location = new System.Drawing.Point(6, 5);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Location = new System.Drawing.Point(7, 7);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(248, 44);
+            this.groupBox6.Size = new System.Drawing.Size(283, 59);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "disposition";
             // 
             // nud_row
             // 
-            this.nud_row.Location = new System.Drawing.Point(179, 16);
-            this.nud_row.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nud_row.Location = new System.Drawing.Point(205, 21);
             this.nud_row.Name = "nud_row";
-            this.nud_row.Size = new System.Drawing.Size(45, 23);
+            this.nud_row.Size = new System.Drawing.Size(51, 27);
             this.nud_row.TabIndex = 8;
             this.nud_row.Value = new decimal(new int[] {
             2,
@@ -221,18 +211,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(130, 20);
+            this.label4.Location = new System.Drawing.Point(149, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 15);
+            this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Lignes";
             // 
             // nud_col
             // 
-            this.nud_col.Location = new System.Drawing.Point(80, 16);
-            this.nud_col.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nud_col.Location = new System.Drawing.Point(91, 21);
             this.nud_col.Name = "nud_col";
-            this.nud_col.Size = new System.Drawing.Size(45, 23);
+            this.nud_col.Size = new System.Drawing.Size(51, 27);
             this.nud_col.TabIndex = 6;
             this.nud_col.Value = new decimal(new int[] {
             2,
@@ -244,9 +233,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 20);
+            this.label3.Location = new System.Drawing.Point(10, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Colonnes";
             // 
@@ -258,11 +247,9 @@
             this.groupBox5.Controls.Add(this.rb_background_imported);
             this.groupBox5.Controls.Add(this.backImageComboBox);
             this.groupBox5.Controls.Add(this.rb_background_embed);
-            this.groupBox5.Location = new System.Drawing.Point(10, 119);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Location = new System.Drawing.Point(11, 159);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(232, 71);
+            this.groupBox5.Size = new System.Drawing.Size(265, 95);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Image de fond";
@@ -270,10 +257,9 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(160, 39);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(183, 52);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(53, 22);
+            this.button4.Size = new System.Drawing.Size(61, 29);
             this.button4.TabIndex = 4;
             this.button4.Text = "find";
             this.button4.UseVisualStyleBackColor = true;
@@ -283,20 +269,18 @@
             // 
             this.backgroundFileNameTextInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.backgroundFileNameTextInput.Location = new System.Drawing.Point(88, 40);
-            this.backgroundFileNameTextInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.backgroundFileNameTextInput.Location = new System.Drawing.Point(101, 53);
             this.backgroundFileNameTextInput.Name = "backgroundFileNameTextInput";
-            this.backgroundFileNameTextInput.Size = new System.Drawing.Size(68, 23);
+            this.backgroundFileNameTextInput.Size = new System.Drawing.Size(77, 27);
             this.backgroundFileNameTextInput.TabIndex = 3;
             this.backgroundFileNameTextInput.TextChanged += new System.EventHandler(this.backGroundImageChange);
             // 
             // rb_background_imported
             // 
             this.rb_background_imported.AutoSize = true;
-            this.rb_background_imported.Location = new System.Drawing.Point(5, 42);
-            this.rb_background_imported.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rb_background_imported.Location = new System.Drawing.Point(6, 56);
             this.rb_background_imported.Name = "rb_background_imported";
-            this.rb_background_imported.Size = new System.Drawing.Size(71, 19);
+            this.rb_background_imported.Size = new System.Drawing.Size(88, 24);
             this.rb_background_imported.TabIndex = 2;
             this.rb_background_imported.Text = "Importer";
             this.rb_background_imported.UseVisualStyleBackColor = true;
@@ -308,10 +292,9 @@
             this.backImageComboBox.FormattingEnabled = true;
             this.backImageComboBox.Items.AddRange(new object[] {
             "aucune"});
-            this.backImageComboBox.Location = new System.Drawing.Point(101, 16);
-            this.backImageComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.backImageComboBox.Location = new System.Drawing.Point(115, 21);
             this.backImageComboBox.Name = "backImageComboBox";
-            this.backImageComboBox.Size = new System.Drawing.Size(113, 23);
+            this.backImageComboBox.Size = new System.Drawing.Size(129, 28);
             this.backImageComboBox.TabIndex = 1;
             this.backImageComboBox.SelectedIndexChanged += new System.EventHandler(this.backGroundImageChange);
             // 
@@ -319,10 +302,9 @@
             // 
             this.rb_background_embed.AutoSize = true;
             this.rb_background_embed.Checked = true;
-            this.rb_background_embed.Location = new System.Drawing.Point(5, 20);
-            this.rb_background_embed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rb_background_embed.Location = new System.Drawing.Point(6, 27);
             this.rb_background_embed.Name = "rb_background_embed";
-            this.rb_background_embed.Size = new System.Drawing.Size(83, 19);
+            this.rb_background_embed.Size = new System.Drawing.Size(103, 24);
             this.rb_background_embed.TabIndex = 0;
             this.rb_background_embed.TabStop = true;
             this.rb_background_embed.Text = "Embarquer";
@@ -333,11 +315,9 @@
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.b_addDirectory);
             this.groupBox2.Controls.Add(this.b_addFile);
-            this.groupBox2.Location = new System.Drawing.Point(10, 33);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(11, 44);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(232, 82);
+            this.groupBox2.Size = new System.Drawing.Size(265, 109);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Images";
@@ -346,10 +326,9 @@
             // 
             this.b_addDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.b_addDirectory.Location = new System.Drawing.Point(3, 52);
-            this.b_addDirectory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b_addDirectory.Location = new System.Drawing.Point(3, 69);
             this.b_addDirectory.Name = "b_addDirectory";
-            this.b_addDirectory.Size = new System.Drawing.Size(224, 22);
+            this.b_addDirectory.Size = new System.Drawing.Size(256, 29);
             this.b_addDirectory.TabIndex = 2;
             this.b_addDirectory.Text = "&Inclure";
             this.b_addDirectory.UseVisualStyleBackColor = true;
@@ -359,10 +338,9 @@
             // 
             this.b_addFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.b_addFile.Location = new System.Drawing.Point(3, 20);
-            this.b_addFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b_addFile.Location = new System.Drawing.Point(3, 27);
             this.b_addFile.Name = "b_addFile";
-            this.b_addFile.Size = new System.Drawing.Size(224, 22);
+            this.b_addFile.Size = new System.Drawing.Size(256, 29);
             this.b_addFile.TabIndex = 1;
             this.b_addFile.Text = "&Ajouter";
             this.b_addFile.UseVisualStyleBackColor = true;
@@ -376,8 +354,8 @@
             this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(725, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(829, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -394,63 +372,63 @@
             this.toolStripSeparator2,
             this.quiterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.fichierToolStripMenuItem.Text = "&Fichier";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(244, 26);
             this.toolStripMenuItem1.Text = "&Charger projet";
             // 
             // enregistrerProjetToolStripMenuItem
             // 
             this.enregistrerProjetToolStripMenuItem.Name = "enregistrerProjetToolStripMenuItem";
-            this.enregistrerProjetToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.enregistrerProjetToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.enregistrerProjetToolStripMenuItem.Text = "&Enregistrer projet";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(241, 6);
             // 
             // configurationToolStripMenuItem
             // 
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.configurationToolStripMenuItem.Text = "&Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
             // chargerConfigToolStripMenuItem
             // 
             this.chargerConfigToolStripMenuItem.Name = "chargerConfigToolStripMenuItem";
-            this.chargerConfigToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.chargerConfigToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.chargerConfigToolStripMenuItem.Text = "C&harger Config";
             this.chargerConfigToolStripMenuItem.Click += new System.EventHandler(this.chargerConfigToolStripMenuItem_Click);
             // 
             // enregistrerConfigToolStripMenuItem
             // 
             this.enregistrerConfigToolStripMenuItem.Name = "enregistrerConfigToolStripMenuItem";
-            this.enregistrerConfigToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.enregistrerConfigToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.enregistrerConfigToolStripMenuItem.Text = "E&nregistrer Config";
             this.enregistrerConfigToolStripMenuItem.Click += new System.EventHandler(this.enregistrerConfigToolStripMenuItem_Click);
             // 
             // enregistrerConfigSousToolStripMenuItem
             // 
             this.enregistrerConfigSousToolStripMenuItem.Name = "enregistrerConfigSousToolStripMenuItem";
-            this.enregistrerConfigSousToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.enregistrerConfigSousToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.enregistrerConfigSousToolStripMenuItem.Text = "En&registrer Config sous";
             this.enregistrerConfigSousToolStripMenuItem.Click += new System.EventHandler(this.enregistrerConfigSousToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(241, 6);
             // 
             // quiterToolStripMenuItem
             // 
             this.quiterToolStripMenuItem.Name = "quiterToolStripMenuItem";
-            this.quiterToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.quiterToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.quiterToolStripMenuItem.Text = "&Quiter";
             this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
             // 
@@ -459,13 +437,13 @@
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aProposToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(24, 20);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(30, 24);
             this.toolStripMenuItem2.Text = "?";
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.aProposToolStripMenuItem.Text = "A propos";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
@@ -476,13 +454,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 5);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(680, 166);
+            this.dataGridView1.Size = new System.Drawing.Size(777, 221);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox4
@@ -493,11 +470,9 @@
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.outputPath);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(13, 418);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(15, 557);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(555, 73);
+            this.groupBox4.Size = new System.Drawing.Size(634, 97);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Execution";
@@ -505,10 +480,9 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(467, 43);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(534, 57);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 22);
+            this.button3.Size = new System.Drawing.Size(94, 29);
             this.button3.TabIndex = 5;
             this.button3.Text = "&Parcourir";
             this.button3.UseVisualStyleBackColor = true;
@@ -519,19 +493,18 @@
             this.outputPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.outputPath.BackColor = System.Drawing.SystemColors.Window;
-            this.outputPath.Location = new System.Drawing.Point(5, 44);
-            this.outputPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.outputPath.Location = new System.Drawing.Point(6, 59);
             this.outputPath.Name = "outputPath";
-            this.outputPath.Size = new System.Drawing.Size(456, 23);
+            this.outputPath.Size = new System.Drawing.Size(521, 27);
             this.outputPath.TabIndex = 4;
             this.outputPath.TextChanged += new System.EventHandler(this.outputPath_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 22);
+            this.label2.Location = new System.Drawing.Point(6, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
+            this.label2.Size = new System.Drawing.Size(121, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Chemin de sortie";
             // 
@@ -542,10 +515,9 @@
             // executeTransfoButton
             // 
             this.executeTransfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.executeTransfoButton.Location = new System.Drawing.Point(588, 427);
-            this.executeTransfoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.executeTransfoButton.Location = new System.Drawing.Point(672, 569);
             this.executeTransfoButton.Name = "executeTransfoButton";
-            this.executeTransfoButton.Size = new System.Drawing.Size(122, 61);
+            this.executeTransfoButton.Size = new System.Drawing.Size(139, 81);
             this.executeTransfoButton.TabIndex = 4;
             this.executeTransfoButton.Text = "&Executer";
             this.executeTransfoButton.UseVisualStyleBackColor = true;
@@ -558,11 +530,9 @@
             this.groupBox7.Controls.Add(this.ch_openOnEnd);
             this.groupBox7.Controls.Add(this.cb_outputMethod);
             this.groupBox7.Controls.Add(this.label1);
-            this.groupBox7.Location = new System.Drawing.Point(221, 12);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox7.Location = new System.Drawing.Point(253, 16);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox7.Size = new System.Drawing.Size(232, 74);
+            this.groupBox7.Size = new System.Drawing.Size(265, 99);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Sortie";
@@ -570,9 +540,10 @@
             // ch_openOnEnd
             // 
             this.ch_openOnEnd.AutoSize = true;
-            this.ch_openOnEnd.Location = new System.Drawing.Point(87, 53);
+            this.ch_openOnEnd.Location = new System.Drawing.Point(99, 71);
+            this.ch_openOnEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ch_openOnEnd.Name = "ch_openOnEnd";
-            this.ch_openOnEnd.Size = new System.Drawing.Size(144, 19);
+            this.ch_openOnEnd.Size = new System.Drawing.Size(179, 24);
             this.ch_openOnEnd.TabIndex = 7;
             this.ch_openOnEnd.Text = "Ouvrir apres genertion";
             this.ch_openOnEnd.UseVisualStyleBackColor = true;
@@ -587,19 +558,18 @@
             "RTF",
             "AWT",
             "XMLDEBUG"});
-            this.cb_outputMethod.Location = new System.Drawing.Point(93, 20);
-            this.cb_outputMethod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_outputMethod.Location = new System.Drawing.Point(106, 27);
             this.cb_outputMethod.Name = "cb_outputMethod";
-            this.cb_outputMethod.Size = new System.Drawing.Size(133, 23);
+            this.cb_outputMethod.Size = new System.Drawing.Size(151, 28);
             this.cb_outputMethod.TabIndex = 6;
             this.cb_outputMethod.SelectedIndexChanged += new System.EventHandler(this.cb_outputMethod_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 23);
+            this.label1.Location = new System.Drawing.Point(8, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 15);
+            this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Type de sortie";
             // 
@@ -608,10 +578,11 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tab_option);
             this.tabControl1.Controls.Add(this.tab_config);
-            this.tabControl1.Location = new System.Drawing.Point(247, 33);
+            this.tabControl1.Location = new System.Drawing.Point(282, 44);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(467, 173);
+            this.tabControl1.Size = new System.Drawing.Size(534, 231);
             this.tabControl1.TabIndex = 6;
             // 
             // tab_option
@@ -620,27 +591,29 @@
             this.tab_option.Controls.Add(this.t_title);
             this.tab_option.Controls.Add(this.groupBox1);
             this.tab_option.Controls.Add(this.groupBox6);
-            this.tab_option.Location = new System.Drawing.Point(4, 24);
+            this.tab_option.Location = new System.Drawing.Point(4, 29);
+            this.tab_option.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tab_option.Name = "tab_option";
-            this.tab_option.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_option.Size = new System.Drawing.Size(459, 145);
+            this.tab_option.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tab_option.Size = new System.Drawing.Size(526, 198);
             this.tab_option.TabIndex = 0;
             this.tab_option.Text = "Options";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(3, 98);
+            this.label5.Location = new System.Drawing.Point(3, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(450, 15);
+            this.label5.Size = new System.Drawing.Size(514, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "titre de l\'album";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // t_title
             // 
-            this.t_title.Location = new System.Drawing.Point(3, 116);
+            this.t_title.Location = new System.Drawing.Point(3, 155);
+            this.t_title.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.t_title.Name = "t_title";
-            this.t_title.Size = new System.Drawing.Size(450, 23);
+            this.t_title.Size = new System.Drawing.Size(514, 27);
             this.t_title.TabIndex = 7;
             // 
             // groupBox1
@@ -648,9 +621,11 @@
             this.groupBox1.Controls.Add(this.ch_intercal);
             this.groupBox1.Controls.Add(this.ch_4couv);
             this.groupBox1.Controls.Add(this.ch_couv);
-            this.groupBox1.Location = new System.Drawing.Point(306, 6);
+            this.groupBox1.Location = new System.Drawing.Point(350, 8);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(147, 85);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(168, 113);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Construction";
@@ -660,9 +635,10 @@
             this.ch_intercal.AutoSize = true;
             this.ch_intercal.Checked = true;
             this.ch_intercal.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ch_intercal.Location = new System.Drawing.Point(9, 43);
+            this.ch_intercal.Location = new System.Drawing.Point(10, 57);
+            this.ch_intercal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ch_intercal.Name = "ch_intercal";
-            this.ch_intercal.Size = new System.Drawing.Size(89, 19);
+            this.ch_intercal.Size = new System.Drawing.Size(111, 24);
             this.ch_intercal.TabIndex = 2;
             this.ch_intercal.Text = "Intercalaires";
             this.ch_intercal.UseVisualStyleBackColor = true;
@@ -673,9 +649,10 @@
             this.ch_4couv.AutoSize = true;
             this.ch_4couv.Checked = true;
             this.ch_4couv.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ch_4couv.Location = new System.Drawing.Point(9, 66);
+            this.ch_4couv.Location = new System.Drawing.Point(10, 88);
+            this.ch_4couv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ch_4couv.Name = "ch_4couv";
-            this.ch_4couv.Size = new System.Drawing.Size(131, 19);
+            this.ch_4couv.Size = new System.Drawing.Size(163, 24);
             this.ch_4couv.TabIndex = 1;
             this.ch_4couv.Text = "4eme de couverture";
             this.ch_4couv.UseVisualStyleBackColor = true;
@@ -686,9 +663,10 @@
             this.ch_couv.AutoSize = true;
             this.ch_couv.Checked = true;
             this.ch_couv.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ch_couv.Location = new System.Drawing.Point(11, 18);
+            this.ch_couv.Location = new System.Drawing.Point(13, 24);
+            this.ch_couv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ch_couv.Name = "ch_couv";
-            this.ch_couv.Size = new System.Drawing.Size(85, 19);
+            this.ch_couv.Size = new System.Drawing.Size(103, 24);
             this.ch_couv.TabIndex = 0;
             this.ch_couv.Text = "Couverture";
             this.ch_couv.UseVisualStyleBackColor = true;
@@ -698,10 +676,11 @@
             // 
             this.tab_config.Controls.Add(this.groupBox8);
             this.tab_config.Controls.Add(this.groupBox7);
-            this.tab_config.Location = new System.Drawing.Point(4, 24);
+            this.tab_config.Location = new System.Drawing.Point(4, 29);
+            this.tab_config.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tab_config.Name = "tab_config";
-            this.tab_config.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_config.Size = new System.Drawing.Size(459, 145);
+            this.tab_config.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tab_config.Size = new System.Drawing.Size(526, 198);
             this.tab_config.TabIndex = 1;
             this.tab_config.Text = "Configuration";
             // 
@@ -713,19 +692,21 @@
             this.tabControl2.Controls.Add(this.tab_content);
             this.tabControl2.Controls.Add(this.tab_couv);
             this.tabControl2.Controls.Add(this.tab_4emeCouv);
-            this.tabControl2.Location = new System.Drawing.Point(10, 209);
+            this.tabControl2.Location = new System.Drawing.Point(11, 279);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(700, 204);
+            this.tabControl2.Size = new System.Drawing.Size(800, 272);
             this.tabControl2.TabIndex = 7;
             // 
             // tab_content
             // 
             this.tab_content.Controls.Add(this.dataGridView1);
-            this.tab_content.Location = new System.Drawing.Point(4, 24);
+            this.tab_content.Location = new System.Drawing.Point(4, 29);
+            this.tab_content.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tab_content.Name = "tab_content";
-            this.tab_content.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_content.Size = new System.Drawing.Size(692, 176);
+            this.tab_content.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tab_content.Size = new System.Drawing.Size(792, 239);
             this.tab_content.TabIndex = 0;
             this.tab_content.Text = "Pages";
             this.tab_content.UseVisualStyleBackColor = true;
@@ -735,10 +716,11 @@
             this.tab_couv.Controls.Add(this.button1);
             this.tab_couv.Controls.Add(this.l_couv_image);
             this.tab_couv.Controls.Add(this.label6);
-            this.tab_couv.Location = new System.Drawing.Point(4, 24);
+            this.tab_couv.Location = new System.Drawing.Point(4, 29);
+            this.tab_couv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tab_couv.Name = "tab_couv";
-            this.tab_couv.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_couv.Size = new System.Drawing.Size(692, 176);
+            this.tab_couv.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tab_couv.Size = new System.Drawing.Size(792, 239);
             this.tab_couv.TabIndex = 1;
             this.tab_couv.Text = "Couverture";
             this.tab_couv.UseVisualStyleBackColor = true;
@@ -746,9 +728,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(466, 67);
+            this.button1.Location = new System.Drawing.Point(533, 89);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 43);
+            this.button1.Size = new System.Drawing.Size(86, 57);
             this.button1.TabIndex = 2;
             this.button1.Text = "Charger une image";
             this.button1.UseVisualStyleBackColor = true;
@@ -757,18 +740,18 @@
             // l_couv_image
             // 
             this.l_couv_image.BackColor = System.Drawing.Color.DimGray;
-            this.l_couv_image.Location = new System.Drawing.Point(57, 30);
+            this.l_couv_image.Location = new System.Drawing.Point(65, 40);
             this.l_couv_image.Name = "l_couv_image";
-            this.l_couv_image.Size = new System.Drawing.Size(243, 127);
+            this.l_couv_image.Size = new System.Drawing.Size(278, 169);
             this.l_couv_image.TabIndex = 1;
             this.l_couv_image.Click += new System.EventHandler(this.load_couv_image_clicked);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(112, 7);
+            this.label6.Location = new System.Drawing.Point(128, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 15);
+            this.label6.Size = new System.Drawing.Size(146, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Image de couverture";
             // 
@@ -779,10 +762,11 @@
             this.tab_4emeCouv.Controls.Add(this.button2);
             this.tab_4emeCouv.Controls.Add(this.l_4couv_image);
             this.tab_4emeCouv.Controls.Add(this.label8);
-            this.tab_4emeCouv.Location = new System.Drawing.Point(4, 24);
+            this.tab_4emeCouv.Location = new System.Drawing.Point(4, 29);
+            this.tab_4emeCouv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tab_4emeCouv.Name = "tab_4emeCouv";
-            this.tab_4emeCouv.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_4emeCouv.Size = new System.Drawing.Size(692, 176);
+            this.tab_4emeCouv.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tab_4emeCouv.Size = new System.Drawing.Size(792, 239);
             this.tab_4emeCouv.TabIndex = 2;
             this.tab_4emeCouv.Text = "4eme de couverture";
             this.tab_4emeCouv.UseVisualStyleBackColor = true;
@@ -790,25 +774,28 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(349, 11);
+            this.label9.Location = new System.Drawing.Point(399, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(154, 15);
+            this.label9.Size = new System.Drawing.Size(195, 20);
             this.label9.TabIndex = 7;
             this.label9.Text = "text de 4eme  de couverture";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(276, 35);
+            this.textBox1.Location = new System.Drawing.Point(315, 47);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 127);
+            this.textBox1.Size = new System.Drawing.Size(355, 168);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(608, 70);
+            this.button2.Location = new System.Drawing.Point(695, 93);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 43);
+            this.button2.Size = new System.Drawing.Size(86, 57);
             this.button2.TabIndex = 5;
             this.button2.Text = "Charger une image";
             this.button2.UseVisualStyleBackColor = true;
@@ -817,26 +804,26 @@
             // l_4couv_image
             // 
             this.l_4couv_image.BackColor = System.Drawing.Color.DimGray;
-            this.l_4couv_image.Location = new System.Drawing.Point(19, 35);
+            this.l_4couv_image.Location = new System.Drawing.Point(22, 47);
             this.l_4couv_image.Name = "l_4couv_image";
-            this.l_4couv_image.Size = new System.Drawing.Size(243, 127);
+            this.l_4couv_image.Size = new System.Drawing.Size(278, 169);
             this.l_4couv_image.TabIndex = 4;
             this.l_4couv_image.Click += new System.EventHandler(this.load_4couv_image_clicked);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 11);
+            this.label8.Location = new System.Drawing.Point(64, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 15);
+            this.label8.Size = new System.Drawing.Size(212, 20);
             this.label8.TabIndex = 3;
             this.label8.Text = "Image de 4eme  de couverture";
             // 
             // PhotoFOP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 499);
+            this.ClientSize = new System.Drawing.Size(829, 665);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.tabControl1);
@@ -845,7 +832,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PhotoFOP";
             this.Text = "PhotoFOP 2";
             this.Resize += new System.EventHandler(this.PhotoFOP_Resize);

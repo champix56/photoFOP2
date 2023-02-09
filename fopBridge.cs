@@ -9,6 +9,14 @@ using System.Xml.Serialization;
 namespace photoFOP2
 {
     [Serializable]
+    [System.Xml.Serialization.XmlRoot("couv")]
+    public class PhotoFOPXMLCouv
+    {
+        public ImageXML image;
+    }
+    
+
+    [Serializable]
     [System.Xml.Serialization.XmlRoot("photos")]
     public class PhotoFOPXML
     {
@@ -16,14 +24,27 @@ namespace photoFOP2
         Config config;
         [XmlArray("pages")]
         List<ImageXML> images;
+        PhotoFOPXMLCouv couv=null;
+        PhotoFOPXMLCouv couv4=null;
+        string title;
 
+        public void setTitle(string title) { this.title = title; }
         public PhotoFOPXML()
         {
-
+            couv=new PhotoFOPXMLCouv();
+            couv4=new PhotoFOPXMLCouv();
         }
         public void setConfig(Config cfg)
         {
             this.config = cfg;
+        }
+        public void setCouv(ImageXML img)
+        {
+            this.couv.image = img;
+        }
+        public void setCouv4(ImageXML img)
+        {
+            this.couv4.image = img;
         }
         public void setDatas(DataGridViewRowCollection rows)
         {
@@ -64,7 +85,22 @@ namespace photoFOP2
             {
                 config.writeXMLConfig(writer);
             }
+            writer.WriteElementString("titre",title);
+            if (couv != null)
+            {
+                writer.WriteStartElement("couv");
+                couv.image.writeXmlElement(writer);
+                writer.WriteEndElement();
 
+            }
+            if (couv4 != null)
+            {
+
+                writer.WriteStartElement("couv4");
+                couv4.image.writeXmlElement(writer);
+                writer.WriteEndElement();
+
+            }
             writer.WriteStartElement("pages");
             if (!config.isolateImagesOnPages)
             {

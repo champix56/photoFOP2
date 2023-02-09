@@ -39,7 +39,30 @@
 	<xsl:template match="/">
 		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
 			<fo:layout-master-set>
-				<fo:simple-page-master master-name="A4" page-height="{concat($paperHeight,$defaultUnit)}" page-width="{concat($paperWidth,$defaultUnit)}">
+				<xsl:if test="/photos/couv/* | /photos/couv4/*">
+					<fo:simple-page-master master-name="PaperCouv" page-height="{concat($paperHeight,$defaultUnit)}" page-width="{concat($paperWidth,$defaultUnit)}">
+						<xsl:element name="fo:region-body">
+							<xsl:if test="/photos/config/backgroundAlpha/image">
+								<xsl:attribute name="background-image"><xsl:value-of select="concat(/photos/config/backgroundAlpha/image/@path,photos/config/backgroundAlpha/image/@href)"/></xsl:attribute>
+							</xsl:if>
+						</xsl:element>
+					</fo:simple-page-master>
+				</xsl:if>
+				<xsl:if test="/photos/config/intercal = 'True' ">
+					<fo:simple-page-master master-name="PaperIntercal" page-height="{concat($paperHeight,$defaultUnit)}" page-width="{concat($paperWidth,$defaultUnit)}">
+						<xsl:element name="fo:region-body">
+							<xsl:choose>
+								<xsl:when test="/photos/config/backgroundNoAlpha/image">
+									<xsl:attribute name="background-image"><xsl:value-of select="concat(/photos/config/backgroundAlpha/image/@path,photos/config/backgroundNoAlpha/image/@href)"/></xsl:attribute>
+								</xsl:when>
+								<xsl:when test="/photos/config/backgroundAlpha/image">
+									<xsl:attribute name="background-image"><xsl:value-of select="concat(/photos/config/backgroundAlpha/image/@path,photos/config/backgroundAlpha/image/@href)"/></xsl:attribute>
+								</xsl:when>
+							</xsl:choose>
+						</xsl:element>
+					</fo:simple-page-master>
+				</xsl:if>
+				<fo:simple-page-master master-name="Paper" page-height="{concat($paperHeight,$defaultUnit)}" page-width="{concat($paperWidth,$defaultUnit)}">
 					<xsl:element name="fo:region-body">
 						<xsl:if test="/photos/config/backgroundAlpha/image">
 							<xsl:attribute name="background-image"><xsl:value-of select="concat(/photos/config/backgroundAlpha/image/@path,photos/config/backgroundAlpha/image/@href)"/></xsl:attribute>
@@ -47,14 +70,56 @@
 					</xsl:element>
 				</fo:simple-page-master>
 			</fo:layout-master-set>
-			<fo:page-sequence master-reference="A4">
+			<xsl:apply-templates select="/photos/couv"/>
+			<xsl:apply-templates select="/photos/config/intercal"/>
+			<fo:page-sequence master-reference="Paper">
 				<fo:flow flow-name="xsl-region-body">
 					<fo:block>
 						<xsl:apply-templates select="/photos/pages"/>
 					</fo:block>
 				</fo:flow>
 			</fo:page-sequence>
+			<xsl:apply-templates select="/photos/config/intercal"/>
+			<xsl:apply-templates select="/photos/couv4"/>
 		</fo:root>
+	</xsl:template>
+	<xsl:template match="/photos/couv">
+		<fo:page-sequence master-reference="PaperCouv">
+			<fo:flow flow-name="xsl-region-body">
+				<fo:block text-align="center" margin-top="{$paperHeight*0.22}{$defaultUnit}">
+					<fo:external-graphic src="{image/@path}{image/@href}" scaling="uniform" content-height="{$paperHeight*0.7}{$defaultUnit}" content-width="{$paperWidth*0.9}{$defaultUnit}"/>
+					<fo:block>
+						<xsl:value-of select="/photos/titre"/>
+					</fo:block>
+				</fo:block>
+			</fo:flow>
+		</fo:page-sequence>
+	</xsl:template>
+	<xsl:template match="/photos/couv4">
+		<fo:page-sequence master-reference="PaperCouv">
+			<fo:flow flow-name="xsl-region-body">
+				<fo:block text-align="center" margin-top="{$paperHeight*0.17}{$defaultUnit}">
+					<fo:external-graphic src="{image/@path}{image/@href}" scaling="uniform" content-height="{$paperHeight*0.4}{$defaultUnit}" content-width="{$paperWidth*0.5}{$defaultUnit}"/>
+					<fo:block>
+						<xsl:apply-templates select="*|text()"/>
+					</fo:block>
+				</fo:block>
+			</fo:flow>
+		</fo:page-sequence>
+	</xsl:template>
+	<xsl:template match="/photos/config/intercal">
+		<xsl:if test=". = 'True' ">
+			<fo:page-sequence master-reference="PaperIntercal">
+				<fo:flow flow-name="xsl-region-body">
+					<fo:block break-after="page">
+						<xsl:text> </xsl:text>
+					</fo:block>
+					<fo:block>
+						<xsl:text> </xsl:text>
+					</fo:block>
+				</fo:flow>
+			</fo:page-sequence>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="pages">
 		<xsl:choose>
@@ -94,8 +159,8 @@
 		</fo:block>
 	</xsl:template>
 	<xsl:template match="pages//image">
-		<fo:block text-align="center" padding-top="0.5mm">
-			<fo:external-graphic src="{@path}{@href}" scaling="uniform" content-height="{concat((($rowHeight - 1)*0.9),$defaultUnit)}" content-width="{concat(($colWidth - 1),$defaultUnit)}"/>
+		<fo:block text-align="center" padding-top="1.5mm">
+			<fo:external-graphic src="{@path}{@href}" scaling="uniform" content-height="{concat((($rowHeight - 15)*0.9),$defaultUnit)}" content-width="{concat(($colWidth - 1),$defaultUnit)}"/>
 			<fo:block/>
 			<xsl:apply-templates select="*|text()"/>
 		</fo:block>

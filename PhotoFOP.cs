@@ -336,6 +336,25 @@ namespace photoFOP2
             PhotoFOPXML pXML = new PhotoFOPXML();
             pXML.setConfig(config);
             pXML.setDatas(dataGridView1.Rows);
+            pXML.setTitle(t_title.Text);
+            if (config.couv){
+                if (couvImg == null) { 
+                    tabControl2.SelectedTab = tabControl2.TabPages["tab_couv"];
+                    l_couv_image.BackColor= System.Drawing.Color.Red;
+                    return;
+                }
+                pXML.setCouv(couvImg);
+            }
+            if ( config.couv4eme){
+                if (couvImg == null)
+                {
+                    tabControl2.SelectedTab = tabControl2.TabPages["tab_4emeCouv"];
+                    l_4couv_image.BackColor = System.Drawing.Color.Red;
+                    return;
+                }
+                pXML.setCouv4(couv4Img); 
+            
+            }
             string xmlpath = System.IO.Directory.GetCurrentDirectory() + "\\output.xml";
             pXML.getXML(xmlpath);
             string outfile = "";
@@ -440,6 +459,7 @@ namespace photoFOP2
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                l_couv_image.BackColor= Color.DimGray;
                 string path = openFileDialog1.FileName;
                 couvImg = new ImageXML(path.Substring(0, path.LastIndexOf('\\') + 1), path.Substring(path.LastIndexOf('\\') + 1), "");
                 l_couv_image.Image = new Bitmap(Image.FromFile(openFileDialog1.FileName), new Size(l_couv_image.Width, l_couv_image.Height));
@@ -476,5 +496,9 @@ namespace photoFOP2
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            couv4Img.comment = textBox1.Text;
+        }
     }
 }
